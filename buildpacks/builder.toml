@@ -5,9 +5,9 @@ buildpacks = [
   { id = "org.cloudfoundry.myisv",uri = "../myisv-cnb/build-out",latest = true },
   { id = "org.cloudfoundry.procfile",uri = "../../procfile-cnb/build-out",latest = true },
 
-  { id = "io.pivotal.openjdk",uri = "../../p-openjdk-cnb/build-out",latest = true },
-  { id = "io.pivotal.buildsystem",uri = "../../p-build-system-cnb/build-out",latest = true },
-  { id = "io.pivotal.jvmapplication",uri = "../../p-jvm-application-cnb/build-out",latest = true },
+  # { id = "io.pivotal.openjdk",uri = "../../p-openjdk-cnb/build-out",latest = true },
+  # { id = "io.pivotal.buildsystem",uri = "../../p-build-system-cnb/build-out",latest = true },
+  # { id = "io.pivotal.jvmapplication",uri = "../../p-jvm-application-cnb/build-out",latest = true },
 
 
 ]
@@ -15,9 +15,9 @@ buildpacks = [
 [[groups]]
 labels = [ "java" ]
 buildpacks = [
-  { id = "io.pivotal.openjdk",                        version = "latest", optional = true  },
-  { id = "io.pivotal.buildsystem",                    version = "latest", optional = true },
-  { id = "io.pivotal.jvmapplication",                 version = "latest", optional = true },
+  { id = "org.cloudfoundry.openjdk",                   version = "latest" },
+  { id = "org.cloudfoundry.buildsystem",                    version = "latest", optional = true },
+  { id = "org.cloudfoundry.jvmapplication",                 version = "latest", optional = true },
   { id = "org.cloudfoundry.myisv",                    version = "latest", optional = true },
   { id = "org.cloudfoundry.procfile",                 version = "latest", optional = true },
 ]
