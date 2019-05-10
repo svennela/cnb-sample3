@@ -8,7 +8,6 @@ buildpacks = [
   { id = "io.pivotal.openjdk",uri = "../../p-openjdk-cnb/build-out",latest = true },
   { id = "io.pivotal.buildsystem",uri = "../../p-build-system-cnb/build-out",latest = true },
   { id = "io.pivotal.jvmapplication",uri = "../../p-jvm-application-cnb/build-out",latest = true },
-  { id = "org.cloudfoundry.buildpacks.httpd",uri = "../../httpd-cnb/httpd-cnb_e2bbe138",latest = true },
 
 
 ]
@@ -18,7 +17,6 @@ labels = [ "java" ]
 buildpacks = [
   { id = "io.pivotal.openjdk",                        version = "latest", optional = true  },
   { id = "io.pivotal.buildsystem",                    version = "latest", optional = true },
-  { id = "org.cloudfoundry.buildpacks.httpd",         version = "latest", optional = true },
   { id = "io.pivotal.jvmapplication",                 version = "latest", optional = true },
   { id = "org.cloudfoundry.myisv",                    version = "latest", optional = true },
   { id = "org.cloudfoundry.procfile",                 version = "latest", optional = true },
