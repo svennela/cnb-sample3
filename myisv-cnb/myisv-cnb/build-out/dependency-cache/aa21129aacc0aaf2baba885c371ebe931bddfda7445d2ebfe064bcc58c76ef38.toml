@@ -1,0 +1,15 @@
+build = false
+cache = true
+launch = false
+
+[metadata]
+  id = "isv-java"
+  name = "ISV Insights Java Agent"
+  version = "2.3.1"
+  uri = "https://github.com/Microsoft/ApplicationInsights-Java/releases/download/2.3.1/applicationinsights-agent-2.3.1.jar"
+  sha256 = "aa21129aacc0aaf2baba885c371ebe931bddfda7445d2ebfe064bcc58c76ef38"
+  stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
+
+  [[metadata.licenses]]
+    type = "MIT"
+    uri = "https://github.com/Microsoft/ApplicationInsights-Java/blob/master/LICENSE.txt"

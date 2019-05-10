@@ -1,0 +1,33 @@
+buildpacks = [
+  { id = "org.cloudfoundry.openjdk",uri = "../../openjdk-cnb/build-out",latest = true },
+  { id = "org.cloudfoundry.buildsystem",uri = "../../build-system-cnb/build-out",latest = true },
+  { id = "org.cloudfoundry.jvmapplication",uri = "../../jvm-application-cnb/build-out",latest = true },
+  { id = "org.cloudfoundry.myisv",uri = "../myisv-cnb/build-out",latest = true },
+  { id = "org.cloudfoundry.procfile",uri = "../../procfile-cnb/build-out",latest = true },
+
+  { id = "io.pivotal.openjdk",uri = "../../p-openjdk-cnb/build-out",latest = true },
+  { id = "io.pivotal.buildsystem",uri = "../../p-build-system-cnb/build-out",latest = true },
+  { id = "io.pivotal.jvmapplication",uri = "../../p-jvm-application-cnb/build-out",latest = true },
+  { id = "org.cloudfoundry.buildpacks.httpd",uri = "../../httpd-cnb/httpd-cnb_e2bbe138",latest = true },
+
+
+]
+
+[[groups]]
+labels = [ "java" ]
+buildpacks = [
+  { id = "io.pivotal.openjdk",                        version = "latest", optional = true  },
+  { id = "io.pivotal.buildsystem",                    version = "latest", optional = true },
+  { id = "org.cloudfoundry.buildpacks.httpd",         version = "latest", optional = true },
+  { id = "io.pivotal.jvmapplication",                 version = "latest", optional = true },
+  { id = "org.cloudfoundry.myisv",                    version = "latest", optional = true },
+  { id = "org.cloudfoundry.procfile",                 version = "latest", optional = true },
+]
+
+[stack]
+id = "io.pivotal.bionic"
+#id = "org.cloudfoundry.stacks.cflinuxfs3"
+# build-image = "packs/build:0.1.0"
+# run-image   = "packs/run:0.1.0"
+build-image = "cfbuildpacks/cflinuxfs3-cnb-experimental:build"
+run-image   = "cfbuildpacks/cflinuxfs3-cnb-experimental:run"
