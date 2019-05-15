@@ -27,7 +27,7 @@ import (
 )
 
 // Dependency indicates that a JVM application should be run with Azure Application Insights enabled.
-const Dependency = "azure-application-insights-java"
+const Dependency = "isv-java"
 
 // Agent represents an agent contribution by the buildpack.
 type Agent struct {

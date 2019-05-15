@@ -15,16 +15,15 @@ buildpacks = [
 [[groups]]
 labels = [ "java" ]
 buildpacks = [
-  { id = "org.cloudfoundry.openjdk",                   version = "latest" },
-  { id = "org.cloudfoundry.buildsystem",                    version = "latest", optional = true },
-  { id = "org.cloudfoundry.jvmapplication",                 version = "latest", optional = true },
+  { id = "org.cloudfoundry.openjdk",                  version = "latest" },
+  { id = "org.cloudfoundry.buildsystem",              version = "latest", optional = true },
+  { id = "org.cloudfoundry.jvmapplication",           version = "latest", optional = true },
   { id = "org.cloudfoundry.myisv",                    version = "latest", optional = true },
   { id = "org.cloudfoundry.procfile",                 version = "latest", optional = true },
 ]
 
 [stack]
 id = "io.pivotal.bionic"
-#id = "org.cloudfoundry.stacks.cflinuxfs3"
 # build-image = "packs/build:0.1.0"
 # run-image   = "packs/run:0.1.0"
 build-image = "cfbuildpacks/cflinuxfs3-cnb-experimental:build"

@@ -47,7 +47,8 @@ func main() {
 }
 
 func d(detect detect.Detect) (int, error) {
-	if !detect.Services.HasService("azure-application-insights", "instrumentation_key") {
+	fmt.Fprintf(os.Stdout, "detect: %s\n", detect.Services)
+	if !detect.Services.HasService("myisv") {
 		return detect.Fail(), nil
 	}
 
